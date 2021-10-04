@@ -7,6 +7,7 @@ import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TodoItemModule } from './todo-item/todo-item.module';
+import { SubTaskModule } from './sub-task/sub-task.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { TodoItemModule } from './todo-item/todo-item.module';
       inject: [ConfigService],
     }),
     TodoItemModule,
+    SubTaskModule,
   ],
   controllers: [AppController],
   providers: [AppService],
